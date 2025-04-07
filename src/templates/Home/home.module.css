@@ -56,6 +56,7 @@ h2 {
     /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente na linha atual. */
     flex-wrap: wrap;   
     padding: 20px;
+    flex-direction: row;
 }
 
 .left, .center, .right {
