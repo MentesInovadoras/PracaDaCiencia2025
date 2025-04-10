@@ -1,17 +1,13 @@
-//projeto original
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Home from './templates/Home/index'
-import WeekCalendar from './templates/WeekCalendar/index'
-import ADM from './templates/ADMbase/index'
-import Loading from './templates/Loading'
-
-//teste vivian
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-// 1 - configurando router
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'; // 1 - configurando router
+import Home from './templates/Home/index';
+import WeekCalendar from './templates/WeekCalendar/index';
+import ADM from './templates/ADMbase/index';
+import Loading from './templates/Loading';
+import Individual from './templates/Agendamento/Individual';
+import Guiado from './templates/Agendamento/Guiado';
+import Institucional from './templates/Agendamento/Institucional';
 
 //levará objetos que serão as páginas
 const router = createBrowserRouter([
@@ -46,6 +42,18 @@ const router = createBrowserRouter([
     {
         path: "ADMsemanal",
         element: <ADM />
+    },
+    {
+        path: "Agendamento/Individual",
+        element: <Individual />
+    },
+    {
+        path: "Agendamento/Guiado",
+        element: <Guiado />
+    },
+    {
+        path: "Agendamento/Institucional",
+        element: <Institucional />
     },
 
 ])

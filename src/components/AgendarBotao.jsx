@@ -27,20 +27,20 @@ const VisitsSection = () => {
     {
       title: 'Visita Individual',
       description: '',
-      imageUrl: '/assets/visita-individual.jpg', // Atualize o caminho conforme sua pasta de imagens
-      route: '/WeekCalendar', // Supondo que o agendamento individual vá para o calendário
+      imageUrl: '/templates/images/visita_individual.jpg', // Atualize o caminho conforme sua pasta de imagens
+      route: '/AgendamentoIndividual', // Supondo que o agendamento individual vá para o calendário
     },
     {
       title: 'Visita Guiada',
       description: 'até 10 pessoas',
-      imageUrl: '/assets/visita-guiada.jpg', // Atualize o caminho conforme sua pasta de imagens
-      route: '/WeekCalendar', // Rota genérica de agendamento, ajuste se houver específica
+      imageUrl: '/templates/images/visita_guiada.jpg', // Atualize o caminho conforme sua pasta de imagens
+      route: '/Agendamento/Guiado', // Rota genérica de agendamento, ajuste se houver específica
     },
     {
       title: 'Visita Institucional',
       description: 'Escolas e outros grupos',
-      imageUrl: '/assets/visita-institucional.jpg', // Atualize o caminho conforme sua pasta de imagens
-      route: '/WeekCalendar', // Rota genérica de agendamento, ajuste se houver específica
+      imageUrl: '/templates/images/visita_institucional.jpg', // Atualize o caminho conforme sua pasta de imagens
+      route: '/Agendamento/Institucional', // Rota genérica de agendamento, ajuste se houver específica
     },
   ];
 
@@ -70,7 +70,7 @@ const styles = {
   },
   card: {
     width: '280px',
-    background: '#fff',
+    background: '#ffff',
     borderRadius: '12px',
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
     overflow: 'hidden',
