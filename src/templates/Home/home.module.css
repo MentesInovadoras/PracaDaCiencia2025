@@ -33,15 +33,20 @@ h2 {
 
 /* LOGO */
 
-.logo_desenho,
-.logo_texto {
-    position: absolute;
-    top: -30px;
-    left: 1%;
-    border-radius: 100%;
-    height: 200px;
+.logo_home{
+    max-height: 80px;
+    height: auto;
     width: auto;
-    clip-path: inset(17% 0 23% 0);
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logo_praca {
+    align-self: flex-start;
+}
+
+.logo_pmv{
+    align-self: flex-end;
 }
 
 /* CARDS */

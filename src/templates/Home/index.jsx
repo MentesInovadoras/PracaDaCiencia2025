@@ -1,8 +1,8 @@
 import styles from './home.module.css';
-import logo_desenho from '../images/logo_desenho.png';
-import logo_texto from '../images/logo_texto.png';
 import background from '../images/img1.jpg';
 import { useNavigate } from 'react-router-dom';
+import logo_pmv from '../images/Logo_PMV_nova.png';
+import logo_praca from '../images/logo_original.png';
 
 
 // Imagens específicas de cada card
@@ -10,18 +10,19 @@ import visita_individual from '../images/visita_individual.jpg';
 import visita_guiada from '../images/visita_guiada.jpg';
 import visita_institucional from '../images/visita_institucional.jpg';
 
-
 export default function Home() {
   const navigate = useNavigate();
 
   return (
     <>
-    
         <div id={styles.background} style={{ backgroundImage: `url(${background})` }}>
           <div>
-            <img src={logo_desenho} alt="Logo" className={styles.logo_desenho} />
-            <img src={logo_texto} alt="Logo" className={styles.logo_texto} />
+            <img src={logo_praca} alt="Logo" className={styles.logo_home} />
+            <a href="https://www.vitoria.es.gov.br/" target ="_blank">
+              <img src={logo_pmv} alt="Logo Prefeitura" className={styles.logo_home}/>
+            </a>
           </div>
+
         <div className={styles.box}>
 
           {/* Card 1 - Visita Individual */}

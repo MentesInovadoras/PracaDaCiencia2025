@@ -40,10 +40,6 @@ const router = createBrowserRouter([
         element: <ADM />
     },
     {
-        path: "ADMsemanal",
-        element: <ADM />
-    },
-    {
         path: "Agendamento/Individual",
         element: <Individual />
     },

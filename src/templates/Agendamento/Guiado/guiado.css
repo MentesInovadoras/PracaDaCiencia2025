@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(232, 232, 232, 1);
+    background: linear-gradient(to right, rgba(255, 153, 51, 0.2), rgba(255, 255, 255, 1));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@ body{
     margin-bottom: -2rem;
 }
 
-.logo-desenho{
+.logo-desenho_guiado{
     position: absolute;
     align-items: right;
     top: -50px;
@@ -24,7 +24,7 @@ body{
     width: auto;
 }
 
-.logo-prefeitura{
+.logo-prefeitura_guiado{
     position: absolute;
     top: 0px;
     right: 1%;
@@ -33,23 +33,22 @@ body{
 }
 
 .form-title{
-    background-color: rgba(155, 148, 148, 0.6);
     border-radius: 30px;
     padding: 1rem;
     margin-top: 6rem;
 }
 
-.Form_individual{
+.Form_guiado{
     display: grid;  
     align-items: flex-start;   
     padding: 50px;
 }
 
-.Form_individual .E-mail, .Nome, .CEP, .Telefone, .num_Visitantes{
+.Form_guiado .E-mail, .Nome, .CPF, .Telefone, .num_Visitantes{
     text-align: left;
 }
 
-.caixa_E-mail, .caixa_Nome, .caixa_CEP, .caixa_Telefone, .caixa_num_Visitantes{
+.caixa_E-mail, .caixa_Nome, .caixa_CPF, .caixa_Telefone, .caixa_num_Visitantes{
     background-color: white;
     border-radius: 30px;
     border: none;
