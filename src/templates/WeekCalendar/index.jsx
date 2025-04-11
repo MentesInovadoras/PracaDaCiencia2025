@@ -1,10 +1,8 @@
 import './WeekCalendar.css';
-// import Logo from '../../components/LogoSide.jsx';
-import NumberTable from '../../components/NumberTable.jsx';
-import AvailableTimes from '../../components/AvailableTimes.jsx';
-import logo1 from '../images/logo_original.png';
-import prefeitura_vitoria from '../images/prefeitura_vitoria.png';
-
+// import NumberTable from '../../components/NumberTable.jsx';
+// import AvailableTimes from '../../components/AvailableTimes.jsx';
+import logo_weekcalendar from '../images/logo_original.png';
+import logo_prefeitura_weekcalendar from '../images/Logo_PMV_nova.png';
 
 export default function WeekCalendar() {
   return (
@@ -15,23 +13,24 @@ export default function WeekCalendar() {
   <link rel="stylesheet" href="styles/app.css" />
   <div id="weekBackground">
     <div id="week_page">
-      <div id="logo_side">
-        <img src={logo1} alt="Logo Da praça da Ciencia" id="logo"/>
-
+      <div id="logo_week">
+        <img src={logo_weekcalendar} alt="Logo Da praça da Ciencia" id="logo_weekcalendar"/>
       </div>
-      <div id="week_side">
+      
+      {/* <div id="week_side">
         <NumberTable/>
       </div>
       <div id="variable_hours">
         <AvailableTimes/>
-      </div>
+      </div> */}
       <div id="vertical_line" />
     </div>
-    <img
-      src={prefeitura_vitoria}
-      alt="Prefeitura de Vitória"
-      id="vix_city_hall"
-    />
+
+    <div id="logo-prefeitura_weekcalendar">
+      <a href="https://www.vitoria.es.gov.br/" target ="_blank">
+        <img src={logo_prefeitura_weekcalendar} alt="Logo Prefeitura" className="logo-prefeitura_weekcalendar" />
+      </a>
+    </div>
   </div>
   </>
 

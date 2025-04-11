@@ -4,7 +4,7 @@ import PrevButton from './PrevButton';
 import HeaderMonth from './HeaderMonth';
 
 export default function NumberTable() {
-    const daysOfWeek = ["Dom.", "Seg.", "Ter.", "Qua.", "Qui.", "Sex.", "Sab."];
+    const daysOfWeek = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab."];
     const currentDate = new Date();
 
     // Função para obter o domingo da semana atual

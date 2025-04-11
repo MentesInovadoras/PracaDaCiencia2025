@@ -8,17 +8,14 @@ export default function Individual() {
   return (
     <div className="container">
       <div className="form-card">
-      <div className="logo-container">
+      <div id="logo-container-individual">
         <a href="/Home">
-          <img src={logo_desenho_individual} alt="Logo Desenho" className="logo-desenho_individual" />
-        </a>
-        <a href="https://www.vitoria.es.gov.br/" target ="_blank">
-          <img src={logo_prefeitura_individual} alt="Logo Prefeitura" className="logo-prefeitura_individual" />
+          <img src={logo_desenho_individual} alt="Logo Desenho" id="logo-desenho_individual" />
         </a>
       </div>
 
       <div className="form-content">
-        <h1 className="form-title">Formulário de Agendamento</h1>
+        <h1 id="form-title-individual">Formulário de Agendamento</h1>
         <hr />
           <form className="Form_individual">
           <h2 className="E-mail">E-mail:</h2>
@@ -34,6 +31,22 @@ export default function Individual() {
 
           <button type="submit" className="botao_continuar">Continuar</button>
         </form>
+
+        <footer>
+          <div>
+            <a href="https://www.vitoria.es.gov.br/" target ="_blank">
+              <img src={logo_prefeitura_individual} alt="Logo Prefeitura" className="logo_rodape" />
+            </a>
+          </div>
+          <div>
+            <p class="texto_tit_rodape">PREFEITURA MUNICIPAL DE VITÓRIA</p>
+            <p class="texto_rodape">Avenida Marechal Mascarenhas de Moraes, 1.927</p>
+            <p class="texto_rodape">Bento Ferreira, Vitória, ES - CEP: 29.050-945</p>
+            <p class="texto_rodape">Telefone: (27) 3382-6000 - Protocolo Geral</p>
+            <p class="texto_rodape">(Atendimento ao público de 08 às 17 horas)</p>
+          </div>
+        </footer>
+        
       </div>         
     </div>
   </div>

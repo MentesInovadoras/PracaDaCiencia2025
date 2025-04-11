@@ -5,7 +5,7 @@ body{
     justify-content: center;
 }
 
-.logo-container{
+#logo-container-guiado{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,28 +14,27 @@ body{
     margin-bottom: -2rem;
 }
 
-.logo-desenho_guiado{
+#logo-desenho_guiado{
     position: absolute;
     align-items: right;
-    top: -50px;
-    left: 1%;
+    top: -90px;
+    right: 200px;
     border-radius: 100%;
     height: 150px;
     width: auto;
 }
 
-.logo-prefeitura_guiado{
-    position: absolute;
-    top: 0px;
-    right: 1%;
-    height: auto;
-    width: 100px;
+#logo-prefeitura_guiado{
+    display: flex;
+    top: -20px;
+    left: 360px;
+    height: 50px;
+    width: auto;
 }
 
-.form-title{
+#form-title-guiado{
     border-radius: 30px;
     padding: 1rem;
-    margin-top: 6rem;
 }
 
 .Form_guiado{

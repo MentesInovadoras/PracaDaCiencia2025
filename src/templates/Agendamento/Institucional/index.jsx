@@ -7,17 +7,17 @@ export default function Institucional() {
   return (
     <div className="container">
       <div className="form-card">
-      <div className="logo-container">
+      <div id="logo-container-institucional">
         <a href="/Home">
-          <img src={logo_desenho_institucional} alt="Logo Desenho" className="logo-desenho_institucional" />
+          <img src={logo_desenho_institucional} alt="Logo Desenho" id="logo-desenho_institucional" />
         </a>
         <a href="https://www.vitoria.es.gov.br/" target ="_blank">
-          <img src={logo_prefeitura_institucional} alt="Logo Prefeitura" className="logo-prefeitura_institucional" />
+          <img src={logo_prefeitura_institucional} alt="Logo Prefeitura" id="logo-prefeitura_institucional" />
         </a>
       </div>
 
       <div className="form-content">
-        <h1 className="form-title">Formulário de Agendamento</h1>
+        <h1 id="form-title-institucional">Formulário de Agendamento</h1>
         <hr className="linha"/>
           <form className="Form_institucional">
           <h2 className="E-mail">E-mail do Responsável:</h2>
