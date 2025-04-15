@@ -1,24 +1,14 @@
 import './guiado.css';
-import logo_desenho_guiado from '../../images/logo_original.png';
-import logo_prefeitura_guiado from '../../images/Logo_PMV_nova.png';
-
+import Header from '../../../components/Header.jsx';
+import Footer from '../../../components/Footer.jsx';
 
 export default function Guiado() {
   return (
-    <div className="container">
-      <div className="form-card">
-      <div id="logo-container-guiado">
-        <a href="/Home">
-          <img src={logo_desenho_guiado} alt="Logo Desenho" id="logo-desenho_guiado" />
-        </a>
-        <a href="https://www.vitoria.es.gov.br/" target ="_blank">
-          <img src={logo_prefeitura_guiado} alt="Logo Prefeitura" id="logo-prefeitura_guiado" />
-        </a>
-      </div>
-
-      <div className="form-content">
+    <>
+      <Header />
+      <div className="form-content-guiado">
         <h1 id="form-title-guiado">Formulário de Agendamento</h1>
-        <hr />
+        <hr id="hr_form" />
           <form className="Form_guiado">
           <h2 className="E-mail">E-mail do Responsável:</h2>
           <input className="caixa_E-mail" type="email" placeholder="visitante@email.com" required />
@@ -33,10 +23,10 @@ export default function Guiado() {
           <h2 className="num_Visitantes">Número de Visitantes: </h2>
           <input className="caixa_num_Visitantes" type="text" placeholder="até 10 pessoas" required />
 
-          <button type="submit" className="botao_continuar">Continuar</button>
+          <button type="submit" className="botao_continuar_guiado">Continuar</button>
         </form>
-      </div>         
-    </div>
-  </div>
+      </div> 
+      <Footer />        
+    </>
   );
 }

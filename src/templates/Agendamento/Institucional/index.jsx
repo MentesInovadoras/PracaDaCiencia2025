@@ -1,24 +1,14 @@
 import './institucional.css';
-import logo_desenho_institucional from '../../images/logo_original.png';
-import logo_prefeitura_institucional from '../../images/Logo_PMV_nova.png';
-
+import Header from '../../../components/Header.jsx';
+import Footer from '../../../components/Footer.jsx';
 
 export default function Institucional() {
   return (
-    <div className="container">
-      <div className="form-card">
-      <div id="logo-container-institucional">
-        <a href="/Home">
-          <img src={logo_desenho_institucional} alt="Logo Desenho" id="logo-desenho_institucional" />
-        </a>
-        <a href="https://www.vitoria.es.gov.br/" target ="_blank">
-          <img src={logo_prefeitura_institucional} alt="Logo Prefeitura" id="logo-prefeitura_institucional" />
-        </a>
-      </div>
-
-      <div className="form-content">
+    <>
+      <Header />
+      <div className="form-content-institucional">
         <h1 id="form-title-institucional">Formulário de Agendamento</h1>
-        <hr className="linha"/>
+        <hr id="hr_form"/>
           <form className="Form_institucional">
           <h2 className="E-mail">E-mail do Responsável:</h2>
           <input className="caixa_E-mail" type="email" placeholder="visitante@email.com" required />
@@ -49,17 +39,13 @@ export default function Institucional() {
             <label>
               <input type="radio" name="instituicao" value="outro"/> Outro
             </label>
-            <input type="text"
-            placeholder=''
-            className='campo-outro'
-            name="instituicaoOutro"
-            />
+            <input type="text" placeholder='' className='campo-outro' name="instituicaoOutro"/>
           </div>
 
-          <button type="submit" className="botao_continuar">Continuar</button>
+          <button type="submit" className="botao_continuar_institucional">Continuar</button>
         </form>
-      </div>         
-    </div>
-  </div>
+        </div>
+      <Footer />
+    </>         
   );
 }

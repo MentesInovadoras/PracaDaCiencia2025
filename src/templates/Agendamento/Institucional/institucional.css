@@ -33,8 +33,15 @@ body{
 }
 
 #form-title-institucional{
-    border-radius: 30px;
+    margin-top: 2rem;
     padding: 1rem;
+}
+
+#hr_form{
+    width: 500px;
+    max-width: 100%;
+    border-top: 2px solid rgb(190, 190, 190);
+    margin: 0 auto;
 }
 
 .Form_institucional{
@@ -56,27 +63,30 @@ body{
     padding-left: 10px;
     margin-bottom: 10px;
 }
-.botao_continuar{
+form > .botao_continuar_institucional{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: rgba(255, 117, 1, 1);
     border: none;
-    border-radius: 10px;
+    border-radius: 100px;
     padding: 0.5rem 7rem;
-    margin: 5rem;
+    margin: 2rem auto;
     display: block;
     cursor: pointer;
 }
-.botao_continuar:hover {
+
+.botao_continuar_institucional:hover {
     background-color: rgb(214, 80, 3);
 }
 
+/* caixa de seleção do tipo de instituição */
 .instituicao-radio{
     display: flex;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    
 }
 
 .titulo-radio{
@@ -93,3 +103,4 @@ body{
     border-radius: 5px;
 
 }
+

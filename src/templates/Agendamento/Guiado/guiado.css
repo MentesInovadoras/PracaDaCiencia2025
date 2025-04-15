@@ -33,8 +33,15 @@ body{
 }
 
 #form-title-guiado{
-    border-radius: 30px;
+    margin-top: 2rem;
     padding: 1rem;
+}
+
+#hr_form{
+    width: 500px;
+    max-width: 100%;
+    border-top: 2px solid rgb(190, 190, 190);
+    margin: 0 auto;
 }
 
 .Form_guiado{
@@ -57,7 +64,7 @@ body{
     margin-bottom: 10px;
 }
 
-.botao_continuar{
+form > .botao_continuar_guiado{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: rgba(255, 117, 1, 1);
@@ -68,7 +75,7 @@ body{
     display: block;
     cursor: pointer;
 }
-.botao_continuar:hover {
+.botao_continuar_guiado:hover {
     background-color: rgb(214, 80, 3);
 }
 
