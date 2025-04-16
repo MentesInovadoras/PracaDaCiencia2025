@@ -3,25 +3,25 @@ footer {
     display: flex;
     justify-content: center; /*centralizar itens*/
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     text-align: center;
-    width: 100vw;
-    padding: 10px 40px;
-    gap: 50px;
+    width: 100%;
+    padding: 1rem 2rem;
+    gap: 2rem;
     box-sizing: border-box;
 }
   /* logo praça e prefeitura */
-.logo-desenho_individual_rodape,
-.logo_rodape {
+.logo-praca_rodape,
+.logo_pmv_rodape {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 120px;
     height: auto;
-    align-items: center;
 }
-  
-.logo-desenho_individual_rodape img,
-.logo_rodape img {
+
+.logo-praca_rodape img,
+.logo_pmv_rodape img {
     max-width: 100%;
     height: auto;
 }

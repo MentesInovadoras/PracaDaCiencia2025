@@ -3,14 +3,12 @@ import "./Footer.css";
 import logo_desenho_individual from '../templates/images/logo_original.png';
 import logo_prefeitura_individual from '../templates/images/logo_PMV_nova.png';
 
-
-
 export default function Footer() {
     return (
         <footer className="footer">
             <div>
               <a href="https://www.vitoria.es.gov.br/" target="_blank">
-                <img src={logo_prefeitura_individual} alt="Logo Prefeitura" className="logo_rodape" />
+                <img src={logo_prefeitura_individual} alt="Logo Prefeitura" className="logo_pmv_rodape" />
               </a>
             </div>
             <div className='texto_rodape_container'>
@@ -21,7 +19,7 @@ export default function Footer() {
               (Atendimento ao público de 08 às 17 horas)</p>
             </div>
             <div>
-              <img src={logo_desenho_individual} alt="Logo Desenho" className="logo-desenho_individual_rodape" />
+              <img src={logo_desenho_individual} alt="Logo Desenho" className="logo-praca_rodape" />
             </div>
             <div className='texto_rodape_praca'>
               <p class="texto_tit_rodape">PRAÇA DA CIÊNCIA</p>
