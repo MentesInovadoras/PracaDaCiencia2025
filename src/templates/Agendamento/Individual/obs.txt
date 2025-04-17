@@ -1,0 +1,1 @@
+de repente adicionar mais uma tela com os dados pessoais de cada visitante: nome, cpf etc
