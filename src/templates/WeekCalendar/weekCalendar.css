@@ -1,4 +1,8 @@
 @charset "UTF-8";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5980c585aab191263e2c9d0d62ecb348dc174e9f
 *{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,6 +12,7 @@
     text-align: center;
 }
 
+<<<<<<< HEAD
 /* texto mês */
 div table h1{
     font-size: 48px;
@@ -19,6 +24,28 @@ div table h2{
     text-transform: uppercase;
 }
 
+=======
+#logo_week{
+    display: flex;
+    position: absolute;
+    top: 350px;
+    width: 250px;
+    left: calc(50% - 550px);
+}
+
+#logo_weekcalendar{
+    width: 250px;
+    bottom: 180px;
+}
+
+#logo_prefeitura_weekcalendar{
+    width: 150px;
+    left: 40%;
+    top: 100px;
+}
+
+
+>>>>>>> 5980c585aab191263e2c9d0d62ecb348dc174e9f
 /* fundo da pagina */
 #weekBackground{
     display: flex;
@@ -43,7 +70,21 @@ div table h2{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     right: 15%;
+=======
+}
+
+/* texto mês */
+div table h1{
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div table h2{
+    font-size: 32px;
+    text-transform: uppercase;
+>>>>>>> 5980c585aab191263e2c9d0d62ecb348dc174e9f
 }
 
 /* DIAS DA SEMANA */
@@ -52,8 +93,12 @@ div table h2{
     height: 60px;
     width: 70px;
     font-style: italic;
+<<<<<<< HEAD
     padding-top: 0px;
     right: 85%;
+=======
+    padding-top: 30px;
+>>>>>>> 5980c585aab191263e2c9d0d62ecb348dc174e9f
 }
 
 /* DIAS DO MES */
@@ -83,8 +128,24 @@ div table h2{
     width: 750px;   
     margin: 100px;
     left: calc(50% - 365px);
+<<<<<<< HEAD
 }
 
+=======
+
+}
+
+/* #vertical_line{
+    position: absolute;
+    height: 50px;
+    bottom: 0px;
+    border-right: 3px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+    left: calc(50% - 280px);
+} */
+
+
+>>>>>>> 5980c585aab191263e2c9d0d62ecb348dc174e9f
 #week_side, .available_hours, .selected_data{
     left: 150px;
 }
@@ -99,6 +160,7 @@ div table h2{
     background-color: rgba(255, 117, 1, 0.1); /* Opcional: mudar o fundo para destacar */
 }
 
+<<<<<<< HEAD
 /* ------------ card de horarios ---------------- */
 #card_hours{
     display: flex;
@@ -116,6 +178,8 @@ div table h2{
     left: 100%;
 }
 
+=======
+>>>>>>> 5980c585aab191263e2c9d0d62ecb348dc174e9f
 /* botao do horario selecionado*/
 #prev_button:hover, #next_button:hover{
     background-color: #cbd1d2;
