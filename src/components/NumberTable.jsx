@@ -4,20 +4,10 @@ import PrevButton from './PrevButton';
 import HeaderMonth from './HeaderMonth';
 
 export default function NumberTable() {
-    const daysOfWeek = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab."];
+    const daysOfWeek = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
     const currentDate = new Date();
 
-    // Função para obter o domingo da semana atual
-    const getStartOfWeek = (date) => {
-        const startOfWeek = new Date(date);
-        const day = startOfWeek.getDay();
-        const diff = startOfWeek.getDate() - day;
-        startOfWeek.setDate(diff);
-        return startOfWeek;
-    };
-
-    const [startDate, setStartDate] = useState(getStartOfWeek(currentDate));
-    const [nextClickCount, setNextClickCount] = useState(0);
+    const [startDate, setStartDate] = useState(new Date(currentDate.getFullYear(), currentDate.getMonth(), 1));
     const [selectedDate, setSelectedDate] = useState(null);
 
     function getDayOfWeek(date) {
@@ -28,71 +18,82 @@ export default function NumberTable() {
         return daysOfWeek[day];
     }
 
-    const days = Array.from({ length: 7 }, (_, i) => {
-        const nextDate = new Date(startDate);
-        nextDate.setDate(startDate.getDate() + i);
+    // Gera todos os dias do mês atual
+    const year = startDate.getFullYear();
+    const month = startDate.getMonth();
+    const totalDays = new Date(year, month + 1, 0).getDate();
+
+    const days = Array.from({ length: totalDays }, (_, i) => {
+        const nextDate = new Date(year, month, i + 1);
         return {
             date: nextDate,
             dayOfWeek: getDayOfWeek(nextDate),
             dayOfMonth: nextDate.getDate(),
-            isPast: nextDate < currentDate - 1,
-            isMonday: nextDate.getDay() === 1 // Verifica se é segunda-feira
+            isPast: nextDate < new Date(currentDate.setHours(0, 0, 0, 0)),
+            isMonday: nextDate.getDay() === 1
         };
     });
 
+    // Preenche a primeira semana com espaços vazios se o mês não começar em domingo
+    const firstDayOfMonth = new Date(year, month, 1).getDay();
+    const paddedDays = [...Array(firstDayOfMonth).fill(null), ...days];
+
+    // Divide os dias em semanas (linhas da tabela)
+    const weeks = [];
+    for (let i = 0; i < paddedDays.length; i += 7) {
+        weeks.push(paddedDays.slice(i, i + 7));
+    }
+
+    const handleDayClick = (dayObj) => {
+        if (!dayObj || dayObj.isPast || dayObj.isMonday) return;
+        setSelectedDate(dayObj.date);
+    };
+
     const handleNextClick = () => {
-        if (nextClickCount < 7) {
-            const newStartDate = new Date(startDate);
-            newStartDate.setDate(startDate.getDate() + 7);
-            setStartDate(newStartDate);
-            setNextClickCount(nextClickCount + 1);
-        }
+        const newStartDate = new Date(startDate);
+        newStartDate.setMonth(startDate.getMonth() + 1);
+        setStartDate(newStartDate);
     };
 
     const handlePrevClick = () => {
         const newStartDate = new Date(startDate);
-        newStartDate.setDate(startDate.getDate() - 7);
+        newStartDate.setMonth(startDate.getMonth() - 1);
         setStartDate(newStartDate);
-        setNextClickCount(nextClickCount - 1);
     };
-
-    const handleDayClick = (date) => {
-        if (!date.isPast && !date.isMonday) {
-            setSelectedDate(date.date);
-        }
-        console.log(date.date)
-    };
-
-    const isPrevDisabled = startDate <= getStartOfWeek(currentDate);
-    const isNextDisabled = nextClickCount >= 7;
 
     return (
         <div>
-            <HeaderMonth date={startDate} />
-            <table>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '750px', margin: '0 auto' }}>
+                <PrevButton onClick={handlePrevClick} />
+                <HeaderMonth date={startDate} />
+                <NextButton onClick={handleNextClick} />
+            </div>
+            <table style={{ margin: '30px auto' }}>
+                <thead>
+                    <tr>
+                        {daysOfWeek.map((day, index) => (
+                            <th key={index}>{day}</th>
+                        ))}
+                    </tr>
+                </thead>
                 <tbody>
-                    <tr>
-                        {days.map((d, index) => (
-                            <th id='th' key={index}>{d.dayOfWeek}</th>
-                        ))}
-                    </tr>
-                    <tr>
-                        {days.map((d, index) => (
-                            <td
-                                id='td'
-                                key={index} 
-                                className={`${d.isPast || d.isMonday ? "disabled_day" : ""} ${selectedDate && selectedDate.getTime() === d.date.getTime() ? "selected_day" : ""}`}
-                                onClick={() => handleDayClick(d)}
-                                style={{ cursor: d.isPast || d.isMonday ? 'not-allowed' : 'pointer' }}
-                            >
-                                {d.dayOfMonth}
-                            </td>
-                        ))}
-                    </tr>
+                    {weeks.map((week, i) => (
+                        <tr key={i}>
+                            {week.map((dayObj, index) => (
+                                <td
+                                    key={index}
+                                    id='td'
+                                    className={`${dayObj?.isPast || dayObj?.isMonday ? "disabled_day" : ""} ${selectedDate && dayObj && selectedDate.getTime() === dayObj.date.getTime() ? "selected_day" : ""}`}
+                                    onClick={() => handleDayClick(dayObj)}
+                                    style={{ cursor: dayObj?.isPast || dayObj?.isMonday ? 'not-allowed' : 'pointer' }}
+                                >
+                                    {dayObj ? dayObj.dayOfMonth : ""}
+                                </td>
+                            ))}
+                        </tr>
+                    ))}
                 </tbody>
             </table>
-            <PrevButton onClick={handlePrevClick} disabled={isPrevDisabled} />
-            <NextButton onClick={handleNextClick} disabled={isNextDisabled} />
         </div>
     );
 }

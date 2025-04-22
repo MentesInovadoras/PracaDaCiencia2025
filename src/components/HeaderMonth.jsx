@@ -3,9 +3,16 @@ export default function HeaderMonth({ date }) {
         month: 'long',
         year: 'numeric',
     });
+
+    const formattedDate = capitalizeFirstLetter(ptBRDateFormater.format(date));
+
     return (
         <header>
-            <h2 className="main_title">{ptBRDateFormater.format(date)}</h2>
+            <h2 className="mes_ano">{formattedDate}</h2>
         </header>
     );
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
