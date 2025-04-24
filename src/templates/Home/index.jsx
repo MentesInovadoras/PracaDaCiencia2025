@@ -30,7 +30,7 @@ export default function Home() {
             <img src={visita_individual} alt="Visita Individual" className={styles.card_image} />
             <h1 id={styles.left_box}>Visita Individual</h1>
             <h2 id={styles.center_box}> </h2>
-            <button className={styles.button} onClick={() => navigate('/Agendamento/Individual')}>
+            <button className={styles.button} onClick={() => navigate('/weekcalendar')}>
               AGENDAR
             </button>
           </div>

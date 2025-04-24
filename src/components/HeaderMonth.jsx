@@ -7,9 +7,9 @@ export default function HeaderMonth({ date }) {
     const formattedDate = capitalizeFirstLetter(ptBRDateFormater.format(date));
 
     return (
-        <header>
+        <div className="header_calendario">
             <h2 className="mes_ano">{formattedDate}</h2>
-        </header>
+        </div>
     );
 }
 

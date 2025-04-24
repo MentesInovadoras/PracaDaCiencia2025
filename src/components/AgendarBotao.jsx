@@ -28,7 +28,7 @@ const VisitsSection = () => {
       title: 'Visita Individual',
       description: '',
       imageUrl: '/templates/images/visita_individual.jpg', // Atualize o caminho conforme sua pasta de imagens
-      route: '/AgendamentoIndividual', // Supondo que o agendamento individual vá para o calendário
+      route: '/Agendamento/Individual', // Supondo que o agendamento individual vá para o calendário
     },
     {
       title: 'Visita Guiada',
