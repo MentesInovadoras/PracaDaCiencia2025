@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
 }
+
 
 /* fundo da pagina */
 #weekBackground{
@@ -25,7 +25,7 @@
     height: auto;
     gap: 100px;
     flex-direction: row;
-    padding: 0 50rem 0 50rem;
+    padding: 0 0 0 10rem;
 }
 
 /* caixa do calendario */
@@ -37,7 +37,7 @@
     border-radius: 40px;
     width: 550px;
     height: 400px;
-    align-content: center;
+    align-items: center;
 }
 
 /* caixa dos horarios */
@@ -49,33 +49,59 @@
     border-radius: 40px;
     width: 250px;
     height: 100px;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* texto "selecionar data e hora"*/
 #h1_data{
-    font-size: 32px;   
+    font-size: 24px;
+    margin: 30px;
 }
 
+.header_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -65px;
+    margin-bottom: -25px;
+}
+
+/* texto abril de 2025 */
+.mes_ano{
+    font-size: 28px;
+    border-bottom: 2px solid rgba(255, 163, 86, 0.85);
+    padding-bottom: 1px;
+    position: static;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
 /* DIAS DA SEMANA (dom, seg, ter..) */
-#dias_da_semana{
-    font-size: x-large;
-    height: 60px;
-    width: 70px;
+.weekday{
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    width: 50px; 
+    margin-bottom: 5px;
 }
 
 /* DIAS DO MES (1,2,3..) e HORARIO DISPONIVEL*/
 #td{
     border: 1px solid #ffffff;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     font-size:xx-large;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50px;
     cursor: pointer;
     transition: border 0.1s;
     background-color: 0.2s;
-    align-items: center;
+    text-align: center;
 }
 
 /* destaca o ponto onde o cursor está passando - DIAS DO MES e HORARIO DISPONIVEL*/
@@ -84,24 +110,14 @@
     background-color: rgba(255, 117, 1, 0.1); /* Opcional: mudar o fundo para destacar */
 }
 
-/* texto abril de 2025 */
-.mes_ano{
-    font-size: xx-large;
-    border-bottom: 2px solid rgba(255, 163, 86, 0.85); /* LINHA ENTRE O MÊS E OS DIAS DA SEMANA */
-    width: 250px;   /*linha embaixo da data*/
-    top: -130px;
-    position: absolute;
-    left: 125px;
-}
-
-.available_hours, .selected_data{
+/* .available_hours, .selected_data{
     bottom: 90px;
 }
 
 #week_side{
     left: 10px;
     height: 200px;
-}
+} */
 
 /* dia selecionado no calendario */
 .selected_day{
@@ -121,23 +137,13 @@
     background-color: rgba(255, 255, 255, 1);
     border-color: rgba(255, 163, 86, 1);
     border-radius: 50px;
-    position: absolute;
+    position: static;
     text-align: center;
     top: -100%;
     margin: 0;
-    padding: 10px 20px;
+    padding: 5px 15px;
     cursor: pointer;
     font-size: 32px;
-    
-}
-
-/* botao de anterior/prox o mes */
-#prev_button{
-    left: 0;
-}
-
-#next_button{
-    right: 0;
 }
 
 .selected_data{
@@ -148,20 +154,32 @@
 
 /* datas disponiveis */
 #available_times {
-    padding: 20px;
-    padding-top: 75px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* horarios disponiveis */
+#available_times table {
+    border-spacing: 15px 15px;
+}
+
+#available_times td {
+    justify-content: center;
+    align-items: center;
+}
+
+/* circulo onde ficam os horarios disponiveis */
 .available_hours {
-    width: 100px;
+    width: 80px;
     height: 35px;
     border-radius: 35px;
-    border: 3px solid rgba(255, 117, 1, 0.5);
-    padding: 13px;
-    border-spacing: 20px;
+    border: 2px solid rgba(255, 117, 1, 0.5);
+    font-size: 16px;
     transition: border 0.1s, background-color 0.2s;
     cursor: pointer;
+    text-align: center;
 }
 /* horario selecionados */
 .available_hours.selected {
@@ -170,8 +188,9 @@
 }
 
 #week_side table, #variable_hours table{
-    display: flex;
-    border-spacing: 12px 3px;
+    border-spacing: 12px 3px; /* mantemos esse espaçamento entre células */
+    width: 100%;
+    border-collapse: separate;
 }
 
 /* dia indisponivel */

@@ -63,7 +63,7 @@ export default function NumberTable() {
 
     return (
         <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '750px', margin: '0 auto' }}>
+            <div className="header_container">
                 <PrevButton onClick={handlePrevClick} />
                 <HeaderMonth date={startDate} />
                 <NextButton onClick={handleNextClick} />
@@ -72,7 +72,7 @@ export default function NumberTable() {
                 <thead>
                     <tr>
                         {daysOfWeek.map((day, index) => (
-                            <th key={index}>{day}</th>
+                            <th key={index} className="weekday">{day}</th>
                         ))}
                     </tr>
                 </thead>
@@ -81,9 +81,7 @@ export default function NumberTable() {
                         <tr key={i}>
                             {week.map((dayObj, index) => (
                                 <td
-                                    key={index}
-                                    id='td'
-                                    className={`${dayObj?.isPast || dayObj?.isMonday ? "disabled_day" : ""} ${selectedDate && dayObj && selectedDate.getTime() === dayObj.date.getTime() ? "selected_day" : ""}`}
+                                    key={index} id='td' className={`${dayObj?.isPast || dayObj?.isMonday ? "disabled_day" : ""} ${selectedDate && dayObj && selectedDate.getTime() === dayObj.date.getTime() ? "selected_day" : ""}`}
                                     onClick={() => handleDayClick(dayObj)}
                                     style={{ cursor: dayObj?.isPast || dayObj?.isMonday ? 'not-allowed' : 'pointer' }}
                                 >

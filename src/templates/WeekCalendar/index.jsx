@@ -19,6 +19,7 @@ export default function WeekCalendar() {
       <div id="cards">
         <div id="card_calendario">
           <div id="week_side">
+            <td/>
             <NumberTable/>
           </div>
         </div>
