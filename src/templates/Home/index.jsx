@@ -39,7 +39,7 @@ export default function Home() {
           <div className={styles.center}><img src={visita_guiada} alt="Visita Guiada" className={styles.card_image} />
             <h1 id={styles.center_box}>Visita Guiada</h1>
             <h2 id={styles.center_box}>até 10 pessoas</h2>
-            <button className={styles.button} onClick={() => navigate('/Agendamento/Guiado')}>
+            <button className={styles.button} onClick={() => navigate('/weekcalendar')}>
               AGENDAR
             </button>
           </div>
@@ -49,7 +49,7 @@ export default function Home() {
             <h1 id={styles.right_box}>Visita Institucional</h1>
             <h2 id={styles.right_box}>Escolas e outros grupos</h2>
             <button 
-              className={styles.button} onClick={() => navigate('/Agendamento/Institucional')}>
+              className={styles.button} onClick={() => navigate('/weekcalendar')}>
               AGENDAR
             </button>
           </div>

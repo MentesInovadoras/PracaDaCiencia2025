@@ -22,7 +22,7 @@ const CardVisit = ({ title, description, imageUrl, route }) => {
   );
 };
 
-const VisitsSection = () => {
+export default function VisitsSection(){
   const cardsData = [
     {
       title: 'Visita Individual',
@@ -41,6 +41,12 @@ const VisitsSection = () => {
       description: 'Escolas e outros grupos',
       imageUrl: '/templates/images/visita_institucional.jpg', // Atualize o caminho conforme sua pasta de imagens
       route: '/Agendamento/Institucional', // Rota genérica de agendamento, ajuste se houver específica
+    },
+    {
+      title: 'Orientacoes',
+      description: 'Orientações para os usuários',
+      imageUrl: '', // Atualize o caminho conforme sua pasta de imagens
+      route: '/Agendamento/Orientacoes', // Rota genérica de agendamento, ajuste se houver específica
     },
   ];
 
@@ -103,5 +109,3 @@ const styles = {
     fontWeight: 'bold',
   },
 };
-
-export default VisitsSection;

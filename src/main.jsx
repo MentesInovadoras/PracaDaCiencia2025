@@ -8,6 +8,7 @@ import Loading from './templates/Loading';
 import Individual from './templates/Agendamento/Individual';
 import Guiado from './templates/Agendamento/Guiado';
 import Institucional from './templates/Agendamento/Institucional';
+import OrientacoesVisitantes from './templates/OrientacoesVisitantes/Orientacoes.jsx';
 
 //levará objetos que serão as páginas
 const router = createBrowserRouter([
@@ -51,7 +52,10 @@ const router = createBrowserRouter([
         path: "Agendamento/Institucional",
         element: <Institucional />
     },
-
+    {
+        path: "Agendamento/Orientacoes",
+        element: <OrientacoesVisitantes />
+    },
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
