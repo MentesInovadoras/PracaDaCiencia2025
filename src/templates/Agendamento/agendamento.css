@@ -21,7 +21,6 @@ body{
 }
 
 .Formulario{
-    
     display: grid;
     grid-template-columns: 1fr;
     align-items: flex-start;
