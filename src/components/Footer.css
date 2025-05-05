@@ -1,5 +1,5 @@
 footer {
-    background-color: rgba(214,152,108, 0.25);
+    background-color: rgba(255, 117, 1, 0.35);
     display: flex;
     justify-content: center; /*centralizar itens*/
     align-items: center;
@@ -10,6 +10,7 @@ footer {
     gap: 2rem;
     box-sizing: border-box;
 }
+
   /* logo praça e prefeitura */
 .logo-praca_rodape,
 .logo_pmv_rodape {
