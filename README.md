@@ -60,7 +60,7 @@ Apesar da bela ação praticada por eles, o local não possui um time de Tecnolo
 
 
 ### Desenvolvido Com
-Frotnend:
+Frontend:
 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
@@ -160,6 +160,20 @@ Distribuído sob a GNU GENERAL PUBLIC LICENSE. Veja <a href="LICENSE.txt">`LICEN
     </ul>
 </details>
 
+### Vivian Moreira Gomes de Lacerda
+
+<details>
+  <summary>Contato</summary>
+    <ul>
+      <li>
+        Email: viviangomess2002@gmail.com
+      </li>
+      <li>
+      Github: <a href="https://github.com/vviivviaan"> vviivviaan </a>
+      </li>
+    </ul>
+</details>
+
 <p align="right">(<a href="README.md#início">Voltar ao Início</a>)</p>
 
 # Englih Version
@@ -225,7 +239,7 @@ Despite their admirable efforts, the location does not have a dedicated Informat
 
 ### Developed With
 
-Frotnend:
+Frontend:
 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
@@ -323,6 +337,20 @@ Distributed under the GNU GENERAL PUBLIC LICENSE. See <a href="LICENSE.txt">`LIC
       </li>
       <li>
       Github: <a href="https://github.com/chevitaresebruno"> chevitaresebruno </a>
+      </li>
+    </ul>
+</details>
+
+### Vivian Moreira Gomes de Lacerda
+
+<details>
+  <summary>Contact</summary>
+    <ul>
+      <li>
+        Email: viviangomess2002@gmail.com
+      </li>
+      <li>
+      Github: <a href="https://github.com/vviivviaan"> vviivviaan </a>
       </li>
     </ul>
 </details>
