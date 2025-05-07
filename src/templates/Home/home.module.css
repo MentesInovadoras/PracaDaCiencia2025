@@ -39,7 +39,7 @@ h2 {
 .box{
     display: flex;
     /* Define o espaço entre os itens flexíveis dentro do contêiner. */ 
-    gap: 100px;  
+    gap: 60px;  
     /* Alinha os itens horizontalmente ao centro do contêiner. */  
     justify-content: center; 
     /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente na linha atual. */
@@ -88,4 +88,3 @@ h2 {
 .button:hover {
     background-color: rgba(255, 117, 1, 1);
 }
-
