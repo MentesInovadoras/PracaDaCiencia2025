@@ -45,7 +45,7 @@ export default function VisitsSection(){
     {
       title: 'Orientacoes',
       description: 'Orientações para os usuários',
-      imageUrl: '', // Atualize o caminho conforme sua pasta de imagens
+      imageUrl: '',
       route: '/Agendamento/Orientacoes', // Rota genérica de agendamento, ajuste se houver específica
     },
   ];
@@ -63,49 +63,4 @@ export default function VisitsSection(){
       ))}
     </div>
   );
-};
-
-// Estilos inline para simplicidade (pode adaptar para CSS ou styled-components)
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    padding: '20px',
-    gap: '20px',
-  },
-  card: {
-    width: '280px',
-    background: '#ffff',
-    borderRadius: '12px',
-    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-    overflow: 'hidden',
-    textAlign: 'center',
-  },
-  image: {
-    width: '100%',
-    height: '180px',
-    objectFit: 'cover',
-  },
-  content: {
-    padding: '16px',
-  },
-  title: {
-    fontSize: '20px',
-    margin: '10px 0',
-  },
-  description: {
-    color: '#555',
-    fontSize: '14px',
-  },
-  button: {
-    margin: '16px',
-    padding: '10px 20px',
-    backgroundColor: '#F7931E',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '24px',
-    cursor: 'pointer',
-    fontWeight: 'bold',
-  },
 };

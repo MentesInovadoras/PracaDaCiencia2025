@@ -3,6 +3,7 @@ header{
     width: 100vw;
     margin: 0;
     padding: 0;
+    
 }
 
 #logo-container{
@@ -31,7 +32,7 @@ header{
 }
 
 header nav a {
-    color: black;
+    color: rgba(63, 55, 55, 0.8); 
     font-weight: 600; /*negrito*/
     padding: 0px 12px;
     text-decoration: none; /*decoração do texto: linhas e tal*/

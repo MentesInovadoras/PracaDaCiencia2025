@@ -3,12 +3,16 @@ import NumberTable from '../../components/NumberTable.jsx';
 import AvailableTimes from '../../components/AvailableTimes.jsx';
 import Header from '../../components/Header.jsx';
 import Footer from '../../components/Footer.jsx';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function WeekCalendar() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const tipo = location.state?.tipo || 'individual';
+
   function handleClick() {
-    navigate('/agendamento/individual');
+    navigate(`/agendamento/${tipo}`);
   }
   return (
   <>  

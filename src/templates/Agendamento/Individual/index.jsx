@@ -1,15 +1,24 @@
 import '../agendamento.css';
 import Header from '../../../components/Header.jsx';
 import Footer from '../../../components/Footer.jsx';
+import { useNavigate } from 'react-router-dom';
 
 export default function Individual() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    navigate('/agendamento/orientacoes');
+  };
+  
+
   return (
     <>
       <Header />
         <div className="form-card">
           <h1 id="form-title">Formulário de Agendamento</h1>
           <hr id="hr_form" />
-          <form className="Formulario">
+          <form className="Formulario" onSubmit={handleSubmit}>
             <h2 id="E-mail">E-mail:</h2>
             <input id="caixa_E-mail" type="email" placeholder="visitante@email.com" required />
             <h2 id="Nome">Nome Completo:</h2>
@@ -22,6 +31,8 @@ export default function Individual() {
             <input id="caixa_CEP" type="text" placeholder="digite o CEP de sua residência..." required />
 
             <button type="submit" id="botao_continuar">Continuar</button>
+
+            {/* <button className={styles.continuar} onClick={() => ('orientacoes')}>CONTINUAR</button> */}
           </form>
         </div>
       <Footer />
