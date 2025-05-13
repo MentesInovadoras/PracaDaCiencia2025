@@ -9,7 +9,7 @@ import Individual from './templates/Agendamento/Individual';
 import Guiado from './templates/Agendamento/Guiado';
 import Institucional from './templates/Agendamento/Institucional';
 import OrientacoesVisitantes from './templates/OrientacoesVisitantes/Orientacoes.jsx';
-
+import InfosAdicionais from './templates/InfosAdicionais/infos.jsx';
 
 //levará objetos que serão as páginas
 const router = createBrowserRouter([
@@ -56,6 +56,10 @@ const router = createBrowserRouter([
     {
         path: "agendamento/orientacoes",
         element: <OrientacoesVisitantes />
+    },
+    {
+        path:"/informacoes",
+        element: <InfosAdicionais />
     },
 ])
 

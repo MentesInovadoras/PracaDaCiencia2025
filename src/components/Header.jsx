@@ -14,6 +14,7 @@ export default function Header() {
                     <a href="#galeria">Galeria de Fotos</a>
                     <a href="#duvidas">Dúvidas</a>
                     <a href="#contato">Contato</a>
+                    <a className="adm" href="#adm">🔒 Acesso Restrito</a>
                 </nav>
             </div>
         </header>

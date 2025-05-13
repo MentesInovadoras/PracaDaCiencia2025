@@ -1,9 +1,9 @@
+
 header{
     background-color: rgba(255, 117, 1, 0.35);
     width: 100vw;
     margin: 0;
     padding: 0;
-    
 }
 
 #logo-container{
@@ -16,7 +16,7 @@ header{
 }
 
 #logo-desenho{
-    height: 100px;
+    height: 60px;
     width: auto;
     object-fit: contain;
     margin-right: 2rem;
@@ -26,7 +26,6 @@ header{
 
 #barra_navegacao{
     display: flex;
-    align-items: center;
     gap: 24px;
     flex-wrap: wrap;
 }
@@ -36,8 +35,16 @@ header nav a {
     font-weight: 600; /*negrito*/
     padding: 0px 12px;
     text-decoration: none; /*decoração do texto: linhas e tal*/
-    
 }
+
+header nav a:hover{
+    color: rgba(63, 55, 55, 1); 
+}
+
+.adm{
+    color: rgba(63, 55, 55, 0.4); 
+}
+
 
 /* Responsivo */
 @media (max-width: 768px) {

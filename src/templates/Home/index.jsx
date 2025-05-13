@@ -18,7 +18,6 @@ export default function Home() {
     <Header/>
         <div id={styles.background}>
         <div className={styles.box}>
-
           {/* Card 1 - Visita Individual */}
           <div className={styles.left}><img src={visita_individual} alt="Visita Individual" className={styles.card_image} />
             <h1 id={styles.left_box}>Visita Individual</h1>
