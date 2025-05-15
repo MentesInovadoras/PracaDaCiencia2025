@@ -1,3 +1,4 @@
+
 .infos-container {
   max-width: 960px;
   margin: 0 auto;
@@ -26,6 +27,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .galeria img {
@@ -103,3 +105,36 @@
   transform: scale(1.05);
 }
 
+
+/* ..............REVISAR DAQUI PRA CIMA.................. */
+
+/* card de duvidas */
+#secao_duvidas {
+  align-items: center;
+}
+
+/* titulo do card */
+#secao_duvidas h2{
+  font-size: 1.8rem;
+  color: #bf6b00;
+}
+/* perguntas */
+.duvida h3 {
+    border: 2px solid orange;
+    border-radius: 8px;
+    cursor: pointer; /*transformar o cursor do mouse numa mãozinha*/
+    padding: 24px;
+}
+
+.duvida .resposta {
+    border-right: 1px solid #ff725e;
+    border-bottom: 1px solid #ff725e;
+    border-left: 1px solid #ff725e;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    height: 0; /*altura*/
+    overflow: hidden; /*transbordamento de elemento - texto sai da borda (hidden(escondido quando chega no limite..."escondido" dentro dos limites da caixa*/
+    opacity: 0; /*opacidade/transparencia dos elementos*/
+    transition: .2s; /*mudança de estado mais fluídas*/
+}

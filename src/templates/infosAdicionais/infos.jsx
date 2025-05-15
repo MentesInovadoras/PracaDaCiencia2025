@@ -12,8 +12,11 @@ import img7 from '../images/img7.jpg';
 import img8 from '../images/img8.jpg';
 import img9 from '../images/img9.jpg';
 import img10 from '../images/img10.jpg';
-import Facebook from '../Icones/facebook.ico';
-import Instagram from '../Icones/instagram.ico';
+import img11 from '../images/img11.jpg';
+import img12 from '../images/img12.jpg';
+import facebookIcon from '../Icones/facebook.png';
+import instagramIcon from '../Icones/instagram.png';
+import setaIcon from '../Icones/arrow-down.svg';
 
 
 export default function InfosAdicionais() {
@@ -22,17 +25,15 @@ export default function InfosAdicionais() {
     const handleImageClick = (img) => {
         setExpandedImage(img);
   };
-
     const handleClose = () => {
         setExpandedImage(null);
   };
-
   return (
     <>  
         <Header />
         <div className="infos-container">
             <section id="sobre" className="info-section">
-                <h2>Sobre a Praça</h2>
+                <h2>Sobre a Praça da Ciência</h2>
                 <p>
                     <strong>A Praça da Ciência é um espaço interativo de divulgação científica que tem como 
                     objetivo aproximar a ciência da sociedade de forma lúdica, acessível e educativa. 
@@ -57,34 +58,61 @@ export default function InfosAdicionais() {
                 <img src={img8} alt="Foto 8" onClick={() => handleImageClick(img8)} />
                 <img src={img9} alt="Foto 9" onClick={() => handleImageClick(img9)} />
                 <img src={img10} alt="Foto 10" onClick={() => handleImageClick(img10)} />
+                <img src={img11} alt="Foto 11" onClick={() => handleImageClick(img11)} />
+                <img src={img12} alt="Foto 12" onClick={() => handleImageClick(img12)} />
             </div>
         </section>
 
+{/* ampliar a imagem ao clicar */}
         {expandedImage && (
           <div className="modal" onClick={handleClose}>
             <img src={expandedImage} alt="Imagem expandida" className="modal-image" />
           </div>
         )}
 
-        <section id="duvidas" className="info-section">
-            <h2>Dúvidas Frequentes</h2>
-            <ul>
-                <li><strong>Como agendar uma visita?</strong> Acesse o menu de agendamento e escolha a data e horário disponíveis.</li>
-                <li><strong>As visitas são gratuitas?</strong> Sim, todas as visitas são gratuitas e guiadas.</li>
-                <li><strong>Qual a duração da visita?</strong> Em média, 1 hora e 30 minutos.</li>
-            </ul>
+        <section id="secao_duvidas">
+            <div>
+                <h2>Dúvidas Frequentes</h2>
+                
+                <div class = "duvida">
+                    <h3>Como agendar uma visita?</h3>
+                    <img src="imagens e icones/arrow-down.svg" alt=""></img>
+                    <p class="resposta">
+                        Acesse o menu de agendamento e escolha a data e horário disponíveis.
+                    </p>
+                </div>
+                <div class="duvida">
+                    <h3>As visitas são gratuitas?</h3>
+                    <p class="resposta">
+                        Sim, todas as visitas são gratuitas.
+                    </p>
+                </div>
+                <div class="duvida">
+                    <h3>Qual a duração da visita?</h3>
+                    <p class="resposta">
+                        Em média, 1 hora e 30 minutos.
+                    </p>
+                </div>
+            </div>
         </section>
+
+
 
         <section id="contato" className="info-section">
             <h2>Contato</h2>
-            <h2>CENTROS DE CIÊNCIA, EDUCAÇÃO E CULTURA - CCEC</h2>
+            <h3>CENTROS DE CIÊNCIA, EDUCAÇÃO E CULTURA - CCEC</h3>
             <h3>Secretaria Municipal de Educação - SEME</h3>
             <h3>Prefeitura Municipal de Vitória - PMV</h3>           
-                <p>https://aprendevix.edu.vitoria.es.gov.br/ccec</p>
-                <p>https://ccec_pc@edu.vitoria.es.gov.br</p>
-                <p>Telefone: (27) 3345-0882</p>
-                <p>Praça da Ciência</p>
-                <p>@ciencia.vix</p>
+            <p>https://aprendevix.edu.vitoria.es.gov.br/ccec</p>
+            <p>https://ccec_pc@edu.vitoria.es.gov.br</p>
+            <p>Telefone: (27) 3345-0882</p>
+            <p>
+                <img id="facebook" src={facebookIcon} alt="facebook" style={{width: '40px', height: '40px'}} />
+                Praça da Ciência</p>
+            <p>
+                <img id="insta" src={instagramIcon} alt="Instagram" style={{width: '40px', height: '40px'}} />
+                @ciencia.vix
+            </p>
         </section>
     </div>
     <Footer />    
