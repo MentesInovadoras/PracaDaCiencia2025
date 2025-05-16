@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100vw;
+    width: 100%;
     color: rgba(63, 55, 55, 0.8); 
 }
 
@@ -28,6 +28,7 @@ body{
     padding: 2rem 4rem;
     max-width: 600px;
     margin: 0 auto;
+    
 }
 
 .form-card{
@@ -38,8 +39,9 @@ body{
     justify-content: center; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 700px;
-    margin: 2rem auto;
+    margin:110px auto 2rem auto;
     min-height: 85vh;
+
 }
 
 .Formulario #E-mail, #Nome, #CPF, #Telefone, #CEP, #num_Visitantes, #Nome_da_Instituicao, #Municipio_da_Instituicao {

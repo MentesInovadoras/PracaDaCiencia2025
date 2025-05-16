@@ -10,11 +10,11 @@ export default function Header() {
                     <img src={logo_desenho_individual} alt="Logo Desenho" id="logo-desenho" />
                 </a>
                 <nav id="barra_navegacao">
-                    <a href="#sobre">Sobre</a>
-                    <a href="#galeria">Galeria de Fotos</a>
-                    <a href="#duvidas">Dúvidas</a>
-                    <a href="#contato">Contato</a>
-                    <a className="adm" href="#adm">🔒 Acesso Restrito</a>
+                    <a href="/informacoes#sobre">Sobre</a>
+                    <a href="/informacoes#galeria">Galeria de Fotos</a>
+                    <a href="/informacoes#duvidas">Dúvidas</a>
+                    <a href="/informacoes#contato">Contato</a>
+                    <a className="adm" href="/informacoes#ADMbase">🔒 Acesso Restrito</a>
                 </nav>
             </div>
         </header>

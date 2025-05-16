@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 2rem;
   font-family: Arial, sans-serif;
+  padding-top: 150px; 
 }
 
 .info-section {
@@ -137,4 +138,19 @@
     overflow: hidden; /*transbordamento de elemento - texto sai da borda (hidden(escondido quando chega no limite..."escondido" dentro dos limites da caixa*/
     opacity: 0; /*opacidade/transparencia dos elementos*/
     transition: .2s; /*mudança de estado mais fluídas*/
+}
+
+.duvida img {
+    top: 32px;
+    right: 24px;   
+  }
+
+.seta{
+  
+}
+
+
+#contato{
+  background-color: rgba(255, 163, 86, 0.15);
+  border-radius: 10px;
 }

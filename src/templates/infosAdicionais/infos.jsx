@@ -16,7 +16,7 @@ import img11 from '../images/img11.jpg';
 import img12 from '../images/img12.jpg';
 import facebookIcon from '../Icones/facebook.png';
 import instagramIcon from '../Icones/instagram.png';
-import setaIcon from '../Icones/arrow-down.svg';
+import setaIcon from '../Icones/down-arrow.png';
 
 
 export default function InfosAdicionais() {
@@ -76,7 +76,7 @@ export default function InfosAdicionais() {
                 
                 <div class = "duvida">
                     <h3>Como agendar uma visita?</h3>
-                    <img src="imagens e icones/arrow-down.svg" alt=""></img>
+                    <img className="seta" src={setaIcon} alt="down-arrow" alt=""></img>
                     <p class="resposta">
                         Acesse o menu de agendamento e escolha a data e horário disponíveis.
                     </p>
